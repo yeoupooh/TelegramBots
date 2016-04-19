@@ -780,7 +780,7 @@ public abstract class AbsSender {
 
     // Simplified methods
 
-    private void sendApiMethodAsync(BotApiMethod method, SentCallback callback) {
+    private void sendApiMethodAsync(final BotApiMethod method, final SentCallback callback) {
         exe.submit(new Runnable() {
             @Override
             public void run() {
@@ -828,8 +828,8 @@ public abstract class AbsSender {
         if (!jsonObject.getBoolean(Constants.RESPONSEFIELDOK)) {
             throw new TelegramApiException("Error at " + method.getPath(), jsonObject.getString("description"));
         }
-
-        return method.deserializeResponse(jsonObject);
+        return
+ method.deserializeResponse(jsonObject);
     }
 
     private String getBaseUrl() {

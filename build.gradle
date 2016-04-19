@@ -1,0 +1,32 @@
+group 'org.telegrambots'
+version '2.1'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+project.ext {
+    jsonVersion = '20160212+'
+    jerseyVersion = '2.22.2+'
+    httpcompontentsVersion = '4.5.2+'
+}
+
+dependencies {
+    compile "org.json:json:$jsonVersion"
+    compile "org.glassfish.jersey:jersey-bom:$jerseyVersion"
+    compile "org.apache.httpcomponents:httpclient:$httpcompontentsVersion"
+    compile "org.apache.httpcomponents:httpmime:$httpcompontentsVersion"
+    compile "com.sun.jersey:jersey-json:1.19.1"
+    compile "org.glassfish.jersey.containers:jersey-container-grizzly2-http:$jerseyVersion"
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:$jerseyVersion"
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
