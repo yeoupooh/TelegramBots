@@ -37,3 +37,6 @@ hs_err_pid*
 
 # Gradle files
 .gradle/
+
+# Gradle build output files
+/build/
