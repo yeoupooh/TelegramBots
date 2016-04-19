@@ -23,10 +23,9 @@ buildNumber.properties
 hs_err_pid*
 
 # unneeded files
+.idea/
 .idea/dataSources.*
 .idea/workspace.xml
-.idea/libraries/
-.idea/modules/*
 
 # logs files
 *.log
